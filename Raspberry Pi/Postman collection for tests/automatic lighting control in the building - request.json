@@ -1,0 +1,217 @@
+{
+	"info": {
+		"_postman_id": "ccb4a264-d4db-4f29-a909-05caebea3caa",
+		"name": "automatic lighting control in the building - request",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get light sensor",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "0fae4fe3-e98c-4441-aaa5-49638c9a8868",
+						"exec": [
+							"\r",
+							"pm.test(\"200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://{{HOST}}:{{PORT}}/pi/Rooms/LivingRoom/sensors/Light/{{sensor_ID}}",
+					"protocol": "http",
+					"host": [
+						"{{HOST}}"
+					],
+					"port": "{{PORT}}",
+					"path": [
+						"pi",
+						"Rooms",
+						"LivingRoom",
+						"sensors",
+						"Light",
+						"{{sensor_ID}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add light sensor",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "ba16ae25-41e4-4ee1-89a1-a71062574ce2",
+						"exec": [
+							"\r",
+							"pm.test(\"200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"name\": \"light sensor\",\n    \"description\": \"light sensor in the living room\",\n    \"type\": \"I2C\",\n    \"value\": 100,\n    \"unit\": \"Lux\",\n    \"sensor_ID\": 147,\n    \"sensor_address\": \"0x39\",\n    \"SDA\": 4,\n    \"SCL\": 5\n}\n\n\n\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://{{HOST}}:{{PORT}}/pi/Rooms/LivingRoom/sensors/Light",
+					"protocol": "http",
+					"host": [
+						"{{HOST}}"
+					],
+					"port": "{{PORT}}",
+					"path": [
+						"pi",
+						"Rooms",
+						"LivingRoom",
+						"sensors",
+						"Light"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update value of light sensor",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "d301ecde-d3c2-4e8a-b1cb-03b2d6dec014",
+						"exec": [
+							"\r",
+							"pm.test(\"200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"name\": \"light sensor\",\n    \"description\": \"light sensor in the kitchen\",\n    \"type\": \"I2C\",\n    \"value\": 10,\n    \"unit\": \"Lux\",\n    \"sensor_ID\": 147,\n    \"sensor_address\": \"0x39\",\n    \"SDA\": 4,\n    \"SCL\": 5\n}\n\n\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://{{HOST}}:{{PORT}}/pi/Rooms/LivingRoom/sensors/Light/{{sensor_ID}}",
+					"protocol": "http",
+					"host": [
+						"{{HOST}}"
+					],
+					"port": "{{PORT}}",
+					"path": [
+						"pi",
+						"Rooms",
+						"LivingRoom",
+						"sensors",
+						"Light",
+						"{{sensor_ID}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete light sensor",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "139e777e-7f3e-4ae2-879e-c23d80c857ad",
+						"exec": [
+							"",
+							"pm.test(\"204\", function () {",
+							"    pm.response.to.have.status(204);",
+							"});",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://{{HOST}}:{{PORT}}/pi/Rooms/LivingRoom/sensors/Light/{{sensor_ID}}",
+					"protocol": "http",
+					"host": [
+						"{{HOST}}"
+					],
+					"port": "{{PORT}}",
+					"path": [
+						"pi",
+						"Rooms",
+						"LivingRoom",
+						"sensors",
+						"Light",
+						"{{sensor_ID}}"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}

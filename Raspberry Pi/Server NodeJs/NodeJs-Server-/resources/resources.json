@@ -1,0 +1,25 @@
+{
+    "pi": {
+        "name": "HomePage of your home",
+        "description": "Node.js server on the Raspberry pi",
+        "port": 80,
+        "Rooms": {
+            "LivingRoom": {
+                "name": "Living Room",
+                "description": "A place to relax",
+                "sensors": {
+                    "Light": {}
+                },
+                "devices": {
+                    "Light": {
+                        "name": "Mi Smart LED Bulb (White & Color)",
+                        "description": "A smart color bulb",
+                        "device ID": 12,
+                        "brightness": 0,
+                        "unit": "%"
+                    }
+                }
+            }
+        }
+    }
+}

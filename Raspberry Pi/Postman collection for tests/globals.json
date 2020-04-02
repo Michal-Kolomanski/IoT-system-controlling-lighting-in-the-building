@@ -1,0 +1,24 @@
+{
+	"id": "17df59ae-d1e4-49d9-8066-a79b838d7212",
+	"values": [
+		{
+			"key": "HOST",
+			"value": "",
+			"enabled": true
+		},
+		{
+			"key": "PORT",
+			"value": "",
+			"enabled": true
+		},
+		{
+			"key": "sensor_ID",
+			"value": "",
+			"enabled": true
+		}
+	],
+	"name": "My Workspace Globals",
+	"_postman_variable_scope": "globals",
+	"_postman_exported_at": "2020-04-01T15:57:05.835Z",
+	"_postman_exported_using": "Postman/7.16.0"
+}
