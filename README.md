@@ -36,3 +36,36 @@ This module has 16 GPIO ports, however 10 of them can be used as digital I/O
   <img src="images/Wi-FI_LightSensor.jpg">
 </p>
 
+# Server
+The Node.js server was running on Raspberry Pi 4b. The database was launched in the MongoDB environment. 
+File structure: 
+
+<p align="center">
+  <img src="images/files_structure.jpg">
+</p>
+
+# Lighting control algorithm
+Was written also in JavaScript. The flowchart of the algorithm:
+
+<p align="center">
+  <img src="images/flowchart.jpg">
+</p>
+
+# Algorithm tests
+A series of tests were carried out to check the correct operation of the algorithm. 
+Those tests took place at night in a room in which the only light source was an algorithm controlled bulb. 
+When the bulb was off, the Waveshare TSL2581FN light intensity sensor measurement was 0 [lx]. 
+At the beginning of the test, the light intensity range achievable by the bulb was determined.
+It was found that for the sensor located in that place the range of illuminance that can be reached is between 21-183 [lx].
+Then a test was carried out in which the sensor remained in the same place all the time, 
+while the user was declaring specific level of illuminance (21-183 [lx] in steps of 10 [lx]).
+Test results:
+
+<p align="center">
+  <img src="images/Algorithm_test.png">
+</p>
+
+
+A series of tests confirmed the correct operation of the algorithm. Moreover, it turned out that the algorithm works with high accuracy.
+
+
