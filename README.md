@@ -2,8 +2,8 @@
 
 # Introduction
 Automate lighting control in your home. Set the desired illuminance and the algorithm will maintain it.
-![](demo/demo.gif)
-
-
+<p align="center">
+  <img src="demo/demo.gif">
+</p>
 
 ![](images/project_schema.jpg)
