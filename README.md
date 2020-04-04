@@ -68,4 +68,9 @@ Test results:
 
 A series of tests confirmed the correct operation of the algorithm. Moreover, it turned out that the algorithm works with high accuracy.
 
-
+# Requirements
+- Waveshare TSL2581FN,
+- ESP8266,
+- Raspberry Pi (but server can also runs on your computer if it does not bother you),
+- Mi LED smart bulb,
+- MongoDB.
