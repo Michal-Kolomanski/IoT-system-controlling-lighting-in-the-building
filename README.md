@@ -8,7 +8,7 @@ Forget about the need to turn on the light and save energy because the bulb does
   <img src="demo/demo.gif">
 </p>
 
-The demo could also be found at YOUTUBE LINK
+The demo could also be found at [YOUTUBE](https://www.youtube.com/watch?v=g6M5MQARtlo)
 
 # Project schema
 <p align="center">
